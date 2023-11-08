@@ -1,0 +1,33 @@
+DESGINING CLASSES FOR MY ASSIGNMENT
+===================================
+The first class
+===============
+
+Class: Job
+======
+
+Attributes
+=========
+_jobTitle: string
+_companyName: string
+_startYear: int
+_endYear: int
+
+Behavior
+========
+DisplayJobHistory(): void
+
+The second class
+================
+
+Class: Resume
+======
+
+Attributes
+==========
+_name: string
+_job: List<job>
+
+Behavior
+========
+DisplayPersonJobHistory(): void
