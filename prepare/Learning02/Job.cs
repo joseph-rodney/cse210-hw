@@ -1,14 +1,3 @@
-// Attributes
-// =========
-// _jobTitle: string
-// _companyName: string
-// _startYear: int
-// _endYear: int
-
-// Behavior
-// ========
-// DisplayJobDetails(): void
-
 public class Job
 {
     public string _jobTitle;

@@ -1,18 +1,3 @@
-// The second class
-// ================
-
-// Class: Resume
-// ======
-
-// Attributes
-// ==========
-// _name: string
-// _job: List<job>
-
-// Behavior
-// ========
-// DisplayPersonJobHistory(): void
-
 public class Resume
 {
     public string _name;
