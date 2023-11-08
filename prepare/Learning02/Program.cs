@@ -11,7 +11,7 @@ class Program
         job1._companyName = "Microsoft";
         job1._startYear = 2019;
         job1._endYear = 2022;
-        job1.DisplayJobDetails();
+        
 
         // Second Job instance
         Job job2 = new Job();
@@ -19,7 +19,17 @@ class Program
         job2._companyName = "Apple";
         job2._startYear = 2022;
         job2._endYear = 2023;
-        job2.DisplayJobDetails();
+        
+
+        // Creating the Resume instance
+        Resume myresume = new Resume();
+        myresume._name = "Kaneene Joseph";
+        myresume._jobs.Add(job1);
+        myresume._jobs.Add(job2);
+        myresume.DisplayPersonJobDetails();
+    
+        
+
 
     }
 }
