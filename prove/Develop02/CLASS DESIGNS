@@ -1,0 +1,18 @@
+Class: Journal
+======
+
+Attributes and Behavior
+=======================
+AddEntry(newEntry : Entry) : void
+DisplayAll() : void
+SaveToFile(file : string)
+LoadFromFile(file : string)
+
+
+Class: Entry
+======
+Display() : void
+
+Class: PromptGenerator
+======
+GetRandomPrompt() : string
