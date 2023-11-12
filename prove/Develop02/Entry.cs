@@ -3,9 +3,9 @@ using System;
 public class Entry
 {
     // Attributes 
-    public string _date;
-    public string _promptText;
-    public string _entryText;
+    public string _date {get; private set;}
+    public string _promptText{get; private set;}
+    public string _entryText{get; private set;}
 
     // Methods
      public Entry(string date, string promptText, string entryText)
@@ -16,8 +16,7 @@ public class Entry
     }
     public void Display()
     {
-        Console.WriteLine($"Date: {_date}");
-        Console.WriteLine($"Prompt: {_promptText}");
+        Console.WriteLine($"Date: {_date} -> Prompt: {_promptText}");
         Console.WriteLine($"Entry: {_entryText}\n");
     }
 }
