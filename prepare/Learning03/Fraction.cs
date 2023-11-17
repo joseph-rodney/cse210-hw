@@ -44,4 +44,18 @@ public class Fraction
     {
         _bottom = bottom;
     }
+
+    // Step 6
+
+    // Create a method to return the fraction representing a string
+    public string GetFractionString()
+    {
+        return $"{_top}/{_bottom}";
+    }
+
+    // Create a method to return the decimal values of the fraction
+    public double GetDecimalValue()
+    {
+        return (double)_top / _bottom;
+    }
 }
