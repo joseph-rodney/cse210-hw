@@ -4,15 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create instances for the three constructors
-        Fraction fraction1 = new Fraction();
-        Fraction fraction2 = new Fraction(6);
-        Fraction fraction3 = new Fraction(6, 7);
+        // Create instances for the three constructors(modified for step 5)
+        Fraction fraction = new Fraction();
 
-        // Display representation for each fraction
-        DisplayFraction("Fraction 1", fraction1);
-        DisplayFraction("Fraction 1", fraction2);
-        DisplayFraction("Fraction 1", fraction3);
+        // Step 5
+
+        // Display intial values
+        DisplayFraction("Initial Fraction", fraction);
+
+        // Change the values using setters
+        fraction.SetTop(5);
+        fraction.SetBottom(2);
+
+        // Display the new values
+        DisplayFraction("New Values", fraction);
     }
 
     static void DisplayFraction(string label, Fraction fraction)
