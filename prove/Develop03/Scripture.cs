@@ -59,4 +59,10 @@ public class Scripture
             word.Reveal();
         }
     }
+
+    public bool AllWordsHidden()
+{
+    return _words.All(word => word.IsHidden);
+}
+
 }
