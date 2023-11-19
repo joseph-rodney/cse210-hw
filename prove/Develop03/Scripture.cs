@@ -12,17 +12,21 @@ public class Scripture
         InitializeWords(text);
     }
 
+    public Scripture(string text, string book, int chapter, int startVerse, int endVerse)
+    {
+        _reference = new Reference(book, chapter, startVerse, endVerse);
+        InitializeWords(text);
+    }
+
     private void InitializeWords(string text)
     {
         _words = new List<Word>();
         string[] words = text.Split(' ');
 
-        foreach(string word in words)
+        foreach (string word in words)
         {
             _words.Add(new Word(word));
         }
-
-
     }
 
     public string GetDisplayText()
