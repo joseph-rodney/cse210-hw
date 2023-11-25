@@ -14,6 +14,14 @@ public class Activity
         _name = name;
         _description = description;
     }
+    
+    // The Rum Method
+    public void Run()
+    {
+        DisplayStartMessage();
+        PerformActivity();
+        DisplayEndingMessage();
+    }
 
     // Method to display start message
     protected void DisplayStartMessage()
