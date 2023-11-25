@@ -9,7 +9,7 @@ public class ReflectionActivity : Activity
     {
     }
 
-    protected override void PepareForActivity()
+    protected override void PrepareForActivity()
     {
         base.PrepareForActivity();
         Console.WriteLine("Think deeply about the prompt...");
