@@ -17,8 +17,8 @@ public class BreathingActivity : Activity
 
         for(int i = 0; i < _duration; i--)
         {
-            Console.WriteLine(i % 2 == 0 ? "Breathe in...": "Breathe out...");
-            ShowCountDown(3); //Show = count down for 3 seconds
+            Console.Write(i % 2 == 0 ? "Breathe in...": "Breathe out...");
+            ShowCountDown(6); //Show = count down for 3 seconds
         }
     }
 
