@@ -30,7 +30,7 @@ public class Activity
     }
 
     // Method for the Spinner
-    private void SpinnerAnimation()
+    protected void SpinnerAnimation()
     {
         // |/-\|/-\|
         List<string> animationString = new List<string>();
