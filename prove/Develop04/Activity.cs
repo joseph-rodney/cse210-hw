@@ -38,7 +38,7 @@ public class Activity
 
     protected void DisplayEndingMessage()
     {
-        Console.WriteLine($"Good job! You have completed the {_name} Activity for {_duration} seconds.");
+        Console.WriteLine($"Good job! You have completed the {_name} Activity in {_duration} seconds.");
         Thread.Sleep(2000); //Pause for 2 seconds
     }
 
