@@ -32,7 +32,7 @@ public class Activity
     public virtual void PrepareForActivity()
     {
         Console.WriteLine("Get ready ...");
-        Thread.Sleep(2000); //Pause for 2 seconds
+        Thread.Sleep(3000); //Pause for 3 seconds
     }
 
     // Virtual method  to allow  derived class to to define their specific  activity logic
