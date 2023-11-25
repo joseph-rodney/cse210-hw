@@ -23,6 +23,12 @@ public class Activity
         DisplayEndingMessage();
     }
 
+    // Method of the duration
+    public void SetDuration(int duration)
+    {
+        _duration = duration;
+    }
+
     // Method to display start message
     protected void DisplayStartMessage()
     {
