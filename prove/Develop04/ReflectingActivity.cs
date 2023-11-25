@@ -3,7 +3,7 @@ using System.Threading;
 
 public class ReflectionActivity : Activity
 {
-    private string[] _prompts = { "Stand up for someone else", "Do something really difficult", "Help someone in need", "Do something truly selfless" };
+    private string[] _prompts = { "Think of a time you stood up for someone else.", "Think of a time you did something really difficult", "Think of a time you helped someone in need", "Think of a time you did something really helpless" };
 
     public ReflectionActivity() : base("Reflection", "Helps you reflect on times when you've shown strength and resilience.")
     {
@@ -12,18 +12,32 @@ public class ReflectionActivity : Activity
     protected override void PrepareForActivity()
     {
         base.PrepareForActivity();
-        Console.WriteLine("Think deeply about the prompt...");
-        Thread.Sleep(3000); // Pause for 3 seconds
+        Console.WriteLine("Consider the following prompt...");
+        Console.WriteLine();
+        // Thread.Sleep(3000); // Pause for 3 seconds
     }
 
     protected override void PerformActivity()
     {
+        bool initialPromptDisplayed = false;
         foreach (var prompt in _prompts)
         {
+           if(!initialPromptDisplayed)
+           {
             Console.WriteLine($"Prompt: {prompt}");
+            Console.WriteLine();
+            Console.WriteLine("Whenever you have something in mind, press enter");
+            Console.ReadLine();
+            Console.Write("Beginnig Soon...");
+            SpinnerAnimation();
+            Console.WriteLine();
+            initialPromptDisplayed = true;
+           }
+            Console.WriteLine();
             DisplayRandomQuestion();
-            // Continue showing prompts and questions based on user-specified duration
+            SpinnerAnimation();
         }
+        Console.WriteLine();
     }
 
     private void DisplayRandomQuestion()
@@ -43,7 +57,7 @@ public class ReflectionActivity : Activity
         Random random = new Random();
         string randomQuestion = questions[random.Next(questions.Length)];
 
-        Console.WriteLine($"Question: {randomQuestion}");
-        Thread.Sleep(2000); // Pause for 2 seconds
+        Console.Write($"Question: {randomQuestion}");
+        SpinnerAnimation();
     }
 }
