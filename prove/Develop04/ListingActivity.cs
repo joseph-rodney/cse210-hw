@@ -38,7 +38,6 @@ public class ListingActivity : Activity
     {
         // Display a message indicating the start of the listing activity
         Console.WriteLine("List as many responces to the following prompt");
-        Thread.Sleep(2000); // Pause for 2 seconds
 
         // Display the prompt for the user to consider
         string randomPrompt = GetRandomPrompt();
