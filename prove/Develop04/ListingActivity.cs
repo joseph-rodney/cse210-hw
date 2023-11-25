@@ -11,32 +11,58 @@ public class ListingActivity : Activity
         "Your personal heroes"
     };
 
+    private string GetRandomPrompt()
+    {
+        Random random = new Random();
+        return _prompts[random.Next(_prompts.Length)];
+    }
+
+    // Method to show countdown with an animation
+    private void ShowCountDown(int seconds)
+    {
+        for(int i = seconds; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000); //Pause for 1 second
+            Console.Write("\b \b");
+        }
+
+        Console.WriteLine(); //Move to the next line after count down
+    }
+
     public ListingActivity() : base("Listing", "Helps you reflect on the good things in your life by listing as many as you can.")
     {
     }
 
     protected override void PerformActivity()
     {
-        // Display the prompt for the user to consider
-        Console.WriteLine($"Prompt: {_prompts[0]}");
-
         // Display a message indicating the start of the listing activity
-        Console.WriteLine("Get ready to list...");
+        Console.WriteLine("List as many responces to the following prompt");
         Thread.Sleep(2000); // Pause for 2 seconds
 
+        // Display the prompt for the user to consider
+        string randomPrompt = GetRandomPrompt();
+        Console.WriteLine($"Prompt: {randomPrompt}");
+
         // Display a message instructing the user to start listing items
-        Console.WriteLine("Start listing items:");
+        Console.Write("You may begin in...");
+        ShowCountDown(3);
 
-        // Loop to get items from the user based on the specified duration
-        for (int i = 1; i <= _duration; i++)
-        {
-            Console.Write($"Item {i}: ");
-            string item = Console.ReadLine();
-            // Add item to the list or perform any necessary logic
-            Thread.Sleep(1000); // Pause for 1 second between items
-        }
+        DateTime startTime = DateTime.Now;
+        TimeSpan duration = TimeSpan.FromSeconds(_duration);
 
-        // Display the total number of items entered
-        Console.WriteLine($"Total items entered: {_duration}");
+        int itemCount = 0;
+
+        while (DateTime.Now - startTime < duration)
+    {
+        itemCount++;
+        Console.Write($"Item {itemCount}: ");
+        string item = Console.ReadLine();
+        // Add item to the list or perform any necessary logic
+        Thread.Sleep(1000); // Pause for 1 second between items
+    }
+
+    // Display the total number of items entered
+    Console.WriteLine($"Total items entered: {itemCount}");
     }
 }
