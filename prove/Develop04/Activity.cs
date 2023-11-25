@@ -15,5 +15,29 @@ public class Activity
         _description = description;
     }
 
-    
+    // Method to display start message
+    public void DisplayStartMessage()
+    {
+        Console.WriteLine($"Starting {_name} Activity: {_description}");
+        PrepareForActivity();
+    }
+
+    public void DisplayEndingMessage()
+    {
+        Console.WriteLine($"Good job! You have completed the {_name} Activity for {_duration} seconds.");
+        Thread.Sleep(2000); //Pause for 2 seconds
+    }
+
+    // Virtual class to allow derived classes to prepare for the actiivy
+    public virtual void PrepareForActivity()
+    {
+        Console.WriteLine("Get ready ...");
+        Thread.Sleep(2000); //Pause for 2 seconds
+    }
+
+    // Virtual method  to allow  derived class to to define their specific  activity logic
+    public virtual void PerformActivity()
+    {
+        // This will be overridden by specific activities.
+    }
 }
