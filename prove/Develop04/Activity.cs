@@ -24,9 +24,44 @@ public class Activity
     }
 
     // Method of the duration
-    public void SetDuration(int duration)
+    public void SetDuration(int seconds)
     {
-        _duration = duration;
+        _duration = seconds;
+    }
+
+    // Method for the Spinner
+    private void SpinnerAnimation()
+    {
+        // |/-\|/-\|
+        List<string> animationString = new List<string>();
+        animationString.Add("|");
+        animationString.Add("/");
+        animationString.Add("-");
+        animationString.Add("\\");
+        animationString.Add("|");
+        animationString.Add("/");
+        animationString.Add("-");
+        animationString.Add("\\");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddMilliseconds(10000);
+
+        int i = 0;
+
+        while(DateTime.Now < endTime)
+        {
+            string s = animationString[i];
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+            i++;
+
+            if (i >= animationString.Count)
+            {
+                i = 0;
+            }
+        }
     }
 
     // Method to display start message
@@ -38,15 +73,18 @@ public class Activity
 
     protected void DisplayEndingMessage()
     {
-        Console.WriteLine($"Good job! You have completed the {_name} Activity in {_duration} seconds.");
-        Thread.Sleep(3000); //Pause for 2 seconds
+        Console.WriteLine($"Well done!");
+        SpinnerAnimation(); //10 seconds animation
+        Console.WriteLine();
+        Console.WriteLine($"You have completed the {_name} Activity in {_duration} seconds.");
     }
 
     // Virtual class to allow derived classes to prepare for the actiivy
     protected virtual void PrepareForActivity()
     {
         Console.WriteLine("Get ready ...");
-        Thread.Sleep(3000); //Pause for 3 seconds
+        SpinnerAnimation(); //10 seconds animation
+        Console.WriteLine();
     }
 
     // Virtual method  to allow  derived class to to define their specific  activity logic
