@@ -10,7 +10,7 @@ public class BreathingActivity : Activity
     }
 
     // Override the PerformActivity Method
-    public override void PerformActivity()
+    protected override void PerformActivity()
     {
         Console.WriteLine("Get ready to start breathing");
         Thread.Sleep(3000); //Pause for 3 seconds
