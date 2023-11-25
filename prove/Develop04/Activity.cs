@@ -32,7 +32,7 @@ public class Activity
     // Method to display start message
     protected void DisplayStartMessage()
     {
-        Console.WriteLine($"Starting {_name} Activity: {_description}");
+        Console.WriteLine($"Welcome to the {_name} Activity: {_description}");
         PrepareForActivity();
     }
 
