@@ -54,7 +54,7 @@ class Program
     static void RunActivity(Activity activity)
     {
         // Set the duration of the activity
-        Console.WriteLine("Enter duration ini seconds: ");
+        Console.WriteLine("How long would you like to do this in seconds: ");
         activity.SetDuration(int.Parse(Console.ReadLine()));
 
         // Run Activity
