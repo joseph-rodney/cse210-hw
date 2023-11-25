@@ -12,13 +12,20 @@ public class BreathingActivity : Activity
     // Override the PerformActivity Method
     protected override void PerformActivity()
     {
-        Console.WriteLine("Get ready to start breathing");
-        Thread.Sleep(3000); //Pause for 3 seconds
+        DateTime startTime = DateTime.Now;
 
-        for(int i = 0; i < _duration; i--)
+        while ((DateTime.Now - startTime).TotalSeconds < _duration)
         {
-            Console.Write(i % 2 == 0 ? "Breathe in...": "Breathe out...");
-            ShowCountDown(6); //Show = count down for 3 seconds
+            Console.Write("Breathe in...");
+            ShowCountDown(6); // Show count down for 6 seconds
+
+            if ((DateTime.Now - startTime).TotalSeconds < _duration)
+            {
+                Console.Write("Now Breathe out...");
+                ShowCountDown(6); // Show count down for 6 seconds
+            }
+
+            Console.WriteLine();
         }
     }
 
@@ -27,8 +34,9 @@ public class BreathingActivity : Activity
     {
         for(int i = seconds; i > 0; i--)
         {
-            Console.Write($"{i} ");
+            Console.Write(i);
             Thread.Sleep(1000); //Pause for 1 second
+            Console.Write("\b \b");
         }
 
         Console.WriteLine(); //Move to the next line after count down
