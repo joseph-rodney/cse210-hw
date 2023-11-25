@@ -25,7 +25,7 @@ public class BreathingActivity : Activity
     // Method to show countdown with an animation
     private void ShowCountDown(int seconds)
     {
-        for(int i = seconds; i > 0; i++)
+        for(int i = seconds; i > 0; i--)
         {
             Console.Write($"{i} ");
             Thread.Sleep(1000); //Pause for 1 second
