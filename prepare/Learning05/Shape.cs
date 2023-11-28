@@ -10,9 +10,9 @@ public class Shape{
         _color = color;
     }
 
-    public virtual void GetArea()
+    public virtual double GetArea()
     {
-
+        return 1;
     }
 
 }
