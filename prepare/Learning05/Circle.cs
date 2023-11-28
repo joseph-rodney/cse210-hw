@@ -2,18 +2,8 @@ public class Circle : Shape
 {
     private double _radius;
 
-    public Circle()
-    {
-
-    }
-
     //Constructor to accept radius and color
-    public double GetRadius()
-    {
-        return _radius;
-    }
-
-    public void SetRadius(double radius)
+    public Circle(string color, double radius): base(color)
     {
         _radius = radius;
     }
