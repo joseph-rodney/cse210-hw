@@ -4,12 +4,22 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Square Object
         Square square = new Square();
         square.SetColor("Red");
         square.SetSide(3);
-        square.GetSide();
 
         // Print Square Object
-        Console.WriteLine($"Area: {square.GetArea()}");
+        Console.WriteLine($"Area: {square.GetArea()} \nColor:{square.GetColor}");
+
+        //Rectangle Object
+        Rectangle rectangle = new Rectangle();
+        rectangle.SetColor("Blue");
+        rectangle.SetLength(6);
+        rectangle.SetWith(2);
+
+        //Print Rectangle Object
+        Console.WriteLine($"Area: {rectangle.GetArea()} \n{rectangle.GetColor()}");
+        
     }
 }
