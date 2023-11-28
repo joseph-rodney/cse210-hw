@@ -1,11 +1,11 @@
 // create square class inherits the shape class
-public class SquareShape : Shape
+public class Square : Shape
 {
     // Orivatr side attribute
     private double _side;
 
     // Constructor that accepts color and side
-    public SquareShape(double side) : base("Red")
+    public Square(double side) : base("Red")
     {
         _side = side;
     }
