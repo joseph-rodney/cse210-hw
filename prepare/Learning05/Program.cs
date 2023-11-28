@@ -20,6 +20,14 @@ class Program
 
         //Print Rectangle Object
         Console.WriteLine($"Area: {rectangle.GetArea()} \nColor: {rectangle.GetColor()}");
+
+        //Rectangle Object
+        Circle circle = new Circle();
+        circle.SetColor("Green");
+        circle.SetRadius(10);
+
+        //Print Circle Object
+        Console.WriteLine($"Area: {circle.GetArea()} \nColor: {circle.GetColor()}");;
         
     }
 }
