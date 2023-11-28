@@ -19,7 +19,7 @@ class Program
         rectangle.SetWith(2);
 
         //Print Rectangle Object
-        Console.WriteLine($"Area: {rectangle.GetArea()} \n{rectangle.GetColor()}");
+        Console.WriteLine($"Area: {rectangle.GetArea()} \nColor: {rectangle.GetColor()}");
         
     }
 }
