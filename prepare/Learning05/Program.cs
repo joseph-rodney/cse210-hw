@@ -6,6 +6,7 @@ class Program
     {
         //Square Object
         Square square = new Square();
+        // square.SetColor("Red");
         square.SetColor("Red");
         square.SetSide(3);
 
