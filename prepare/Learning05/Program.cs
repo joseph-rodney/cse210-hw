@@ -4,31 +4,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Square Object
-        Square square = new Square();
-        // square.SetColor("Red");
-        square.SetColor("Red");
-        square.SetSide(3);
+        //List to hold all the shapes
+        List<Shape> shapes = new List<Shape>();
+            //Square Object
+            Square square = new Square();
+            square.SetColor("Red");
+            square.SetSide(3);
+            shapes.Add(square);
 
-        // Print Square Object
-        Console.WriteLine($"Area: {square.GetArea()} \nColor:{square.GetColor}");
+            //Rectangle Object
+            Rectangle rectangle = new Rectangle();
+            rectangle.SetColor("Blue");
+            rectangle.SetLength(6);
+            rectangle.SetWith(2);
+            shapes.Add(rectangle);
 
-        //Rectangle Object
-        Rectangle rectangle = new Rectangle();
-        rectangle.SetColor("Blue");
-        rectangle.SetLength(6);
-        rectangle.SetWith(2);
-
-        //Print Rectangle Object
-        Console.WriteLine($"Area: {rectangle.GetArea()} \nColor: {rectangle.GetColor()}");
-
-        //Rectangle Object
-        Circle circle = new Circle();
-        circle.SetColor("Green");
-        circle.SetRadius(10);
-
-        //Print Circle Object
-        Console.WriteLine($"Area: {circle.GetArea()} \nColor: {circle.GetColor()}");
+            //Rectangle Object
+            Circle circle = new Circle();
+            circle.SetColor("Green");
+            circle.SetRadius(10);
+            shapes.Add(circle);
         
+        //Iterate through the list of shapes
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine($"Area: {shape.GetArea()} \nColor: {shape.GetColor()}\n");
+        }
     }
 }
