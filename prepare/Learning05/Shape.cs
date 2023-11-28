@@ -5,9 +5,9 @@ public abstract class Shape{
     protected string _color;
 
     // Constructor to accept color and sets it
-    public Shape()
+    public Shape(string color)
     {
-        
+        _color = color;
     }
 
     public string GetColor()
