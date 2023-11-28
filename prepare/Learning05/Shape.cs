@@ -5,7 +5,17 @@ public class Shape{
     protected string _color;
 
     // Constructor to accept color and sets it
-    public Shape(string color)
+    public Shape()
+    {
+        
+    }
+
+    public string GetColor()
+    {
+        return _color;
+    }
+
+    public void SetColor(string color)
     {
         _color = color;
     }
