@@ -1,8 +1,13 @@
 // create square class inherits the shape class
 public class Square : Shape
 {
-    // Orivatr side attribute
+    // Private side attribute
     private double _side;
+
+    public Square()
+    {
+
+    }
 
     // Constructor that accepts color and side
    public double GetSide()
