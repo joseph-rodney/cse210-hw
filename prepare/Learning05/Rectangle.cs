@@ -4,25 +4,25 @@ public class Rectangle : Shape
     private double _width;
 
     // Get length
-    public double SetLength()
+    public double GetLength()
     {
         return _length;
     }
 
     //Set Length
-    public void GetLength(double length)
+    public void SetLength(double length)
     {
         _length = length;
     }
 
     //Get Width
-    public double SetWidth()
+    public double GetWidth()
     {
         return _width;
     }
 
     //Set Width
-    public void GetWith(double width)
+    public void SetWith(double width)
     {
         _width = width;
     }
