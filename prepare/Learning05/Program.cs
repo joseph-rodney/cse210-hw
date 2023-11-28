@@ -27,7 +27,7 @@ class Program
         circle.SetRadius(10);
 
         //Print Circle Object
-        Console.WriteLine($"Area: {circle.GetArea()} \nColor: {circle.GetColor()}");;
+        Console.WriteLine($"Area: {circle.GetArea()} \nColor: {circle.GetColor()}");
         
     }
 }
