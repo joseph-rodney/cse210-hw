@@ -15,7 +15,7 @@ public abstract class Goal
 
     public abstract bool IsComplete();
 
-    public virtual string GetDetailString()
+    public virtual string GetDetailsString()
     {
         return $"{_shortName}: {_description} ({_points} points)";
     }
