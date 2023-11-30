@@ -12,11 +12,11 @@ public class EternalGoals : Goal
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return false;
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"{_shortName}, {_description}, {_points}";
     }
 }
