@@ -7,12 +7,17 @@ public class EternalGoals : Goal
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        
     }
 
     public override bool IsComplete()
     {
         return false;
+    }
+
+    public override string GetDetailsString()
+    {
+        return $"Eternal Goal: {_shortName}, {_description}";
     }
 
     public override string GetStringRepresentation()
