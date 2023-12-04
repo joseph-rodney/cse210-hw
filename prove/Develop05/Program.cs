@@ -43,19 +43,19 @@ class Program
                     break;
 
                 case "4":
-                    Console.WriteLine("Enter the name of the file: ");
+                    Console.Write("Enter the name of the file: ");
                     filename = Console.ReadLine();
                     goalManager.SaveProgress(filename);
                     break;
 
                 case "5":
-                    Console.WriteLine("Enter the name of the file: ");
+                    Console.Write("Enter the name of the file: ");
                     filename = Console.ReadLine();
                     goalManager.LoadProgress(filename);
                     break;
 
                 case "6":
-                    Console.WriteLine("Enter the name of the file: ");
+                    Console.Write("Enter the name of the file: ");
                     filename = Console.ReadLine();
                     goalManager.SaveProgress(filename);
                     Console.WriteLine("Thank you for using the Goal Tracker program!");
