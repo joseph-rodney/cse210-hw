@@ -16,15 +16,16 @@ public class GoalManager
 
     public void CreateGoal()
     {
-        Console.Write("Enter the name of the new goal: ");
-        string name = Console.ReadLine();
-
-        Console.WriteLine("Select the type of goal:");
+        
+        Console.WriteLine("\nSelect the type of goal:");
         Console.WriteLine("1. Simple");
         Console.WriteLine("2. Eternal");
         Console.WriteLine("3. Checklist");
 
         int type = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter the name of the new goal: ");
+        string name = Console.ReadLine();
 
         Goal newGoal;
 
