@@ -14,7 +14,7 @@ class Program
         {
             // display menu options
 
-            Console.WriteLine($"\n{goalManager.DisplayScore}");
+            goalManager.DisplayScore();
 
             Console.WriteLine("\nMenu options:");
             Console.WriteLine("1. View goals and progress");
@@ -66,7 +66,7 @@ class Program
                     break;
             }
 
-            goalManager.DisplayScore();
+            
         }
         
     }
