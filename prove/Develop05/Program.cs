@@ -7,19 +7,23 @@ class Program
         GoalManager goalManager = new GoalManager();
         string filename = "";
 
-        // display menu options
         Console.WriteLine("Welcome to the Goal Tracker program!");
 
-        Console.WriteLine("Menu options:");
-        Console.WriteLine("1. View goals and progress");
-        Console.WriteLine("2. Create a new goal");
-        Console.WriteLine("3. Record an event");
-        Console.WriteLine("4. Save progress");
-        Console.WriteLine("5. Load progress");
-        Console.WriteLine("6. Exit");
 
         while (true)
         {
+            // display menu options
+
+            Console.WriteLine($"\n{goalManager.DisplayScore}");
+
+            Console.WriteLine("\nMenu options:");
+            Console.WriteLine("1. View goals and progress");
+            Console.WriteLine("2. Create a new goal");
+            Console.WriteLine("3. Record an event");
+            Console.WriteLine("4. Save progress");
+            Console.WriteLine("5. Load progress");
+            Console.WriteLine("6. Exit");
+
             // read user input
             Console.Write("\nSelect a choice from the menu: ");
             string input = Console.ReadLine();
