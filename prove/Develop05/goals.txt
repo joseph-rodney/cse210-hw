@@ -1,13 +1,16 @@
-100
+2000
 SimpleGoal
-Run
-100
+Jump
+200
 SimpleGoal
-Run
-100
-SimpleGoal
-Run
-100
-SimpleGoal
-Run
-100
+Swim
+300
+EternalGoal
+Partakng of the Sacrament
+500
+EternalGoal
+ChecklistGoal
+Workout
+1000
+0
+500
