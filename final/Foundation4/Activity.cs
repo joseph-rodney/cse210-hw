@@ -1,9 +1,11 @@
 public class Activity
 {
-    
+
+    //Attributes
     public DateTime Date;
     public int LengthInMinutes;
 
+    //Behavior
     public Activity(DateTime date, int lengthInMinutes)
     {
         Date = date;
