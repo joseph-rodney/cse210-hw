@@ -1,11 +1,11 @@
 public class Event
 {
     //Attributes
-    public string _eventTitle;
-    public string _description;
-    public DateTime _date;
-    public TimeSpan _time;
-    public Address _venueAddress;
+    protected string _eventTitle;
+    protected string _description;
+    protected DateTime _date;
+    protected TimeSpan _time;
+    protected Address _venueAddress;
     
     //Behavior
     public Event(string eventTitle, string description, DateTime date, TimeSpan time, Address venueAddress)
