@@ -2,14 +2,14 @@ public class Activity
 {
 
     //Attributes
-    public DateTime Date;
-    public int LengthInMinutes;
+    public DateTime _date;
+    public int _lengthInMinutes;
 
     //Behavior
     public Activity(DateTime date, int lengthInMinutes)
     {
-        Date = date;
-        LengthInMinutes = lengthInMinutes;
+        _date = date;
+        _lengthInMinutes = lengthInMinutes;
     }
 
     public virtual double GetDistance()
@@ -29,6 +29,6 @@ public class Activity
 
     public virtual string GetSummary()
     {
-        return $"Date: {Date}, Length: {LengthInMinutes} minutes";
+        return $"Date: {_date}, Length: {_lengthInMinutes} minutes";
     }
 }
