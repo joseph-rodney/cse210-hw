@@ -1,4 +1,4 @@
-public class Events
+public class Event
 {
     //Attributes
     public string _eventTitle;
@@ -8,7 +8,7 @@ public class Events
     public Address _venueAddress;
     
     //Behavior
-    public Events(string eventTitle, string description, DateTime date, TimeSpan time, Address venueAddress)
+    public Event(string eventTitle, string description, DateTime date, TimeSpan time, Address venueAddress)
     {
         _eventTitle = eventTitle;
         _description = description;
