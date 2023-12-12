@@ -2,8 +2,8 @@ public class Activity
 {
 
     //Attributes
-    public DateTime _date;
-    public int _lengthInMinutes;
+    protected DateTime _date;
+    protected int _lengthInMinutes;
 
     //Behavior
     public Activity(DateTime date, int lengthInMinutes)

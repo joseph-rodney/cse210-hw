@@ -1,7 +1,7 @@
 public class CyclingActivity : Activity
 {
     // Attribute
-    public double _speed;
+    private double _speed;
 
     //Behavior
     public CyclingActivity(DateTime date, int lengthInMinutes, double speed) : base(date, lengthInMinutes)

@@ -1,7 +1,7 @@
 public class RunningActivity : Activity
 {
     //Attributes
-    public double _distance;
+    private double _distance;
 
     //Behavior
     public RunningActivity(DateTime date, int lengthInMinutes, double distance) : base(date, lengthInMinutes)
